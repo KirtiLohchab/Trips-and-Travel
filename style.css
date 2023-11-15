@@ -1,0 +1,137 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: black;
+  font-family: "Anton", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon{
+  color: black!important;
+}
+.navbar-toggler-icon {
+  color: black;
+} 
+
+.navbar-toggler > .navbar-toggler-icon {
+  color: black;
+}
+
+.nav-item :hover {
+  background-color: #ffc107;
+  color: white;
+  border-radius: 4px;
+}
+
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+
+}
+
+.dropdown-menu > .dropdown-item:hover{
+  background-color:#ffc107 ;
+  color: white;
+}
+
+.dropdown > .dropdown-menu {
+  background-color: white;
+}
+
+
+.heading {
+  font-family: "Anton", sans-serif;
+  font-family: "Lora", serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Slab", serif;
+  color: rgb(247, 246, 246);
+  text-shadow: 4px 4px 5px black;
+}
+
+.navbar-brand {
+  font-family: "Anton", sans-serif;
+  font-family: "Lora", serif;
+  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Slab", serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.welcome {
+  font-size: 50px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.background-image {
+  background-image: url("background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  width: 100px;
+  padding: 2px;
+}
+
+
+
+#changetext:after {
+  color: rgb(237, 178, 28);
+  font-weight: bold;
+  content: "";
+  animation-name: changetextcontent;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes changetextcontent {
+  0%,
+  100% {
+    content: "INDIA";
+  }
+  40% {
+    content: "USA";
+  }
+  60% {
+    content: "FRANCE";
+  }
+  80% {
+    content: "GERMANY";
+  }
+  100% {
+    content: "CANADA";
+  }
+}
+
+.book:hover {
+  color: white;
+  background-color: #ffc107;
+}
+
+
+
+.container{
+  padding-top: 20px;
+  margin: 20px;
+  border: solid black 1px;
+}
+
+img{
+  width: 500px;
+  padding :20px;
+  justify-content: center;
+}
