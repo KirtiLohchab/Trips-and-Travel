@@ -10,38 +10,24 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* .navbar .navbar-toggler .navbar-toggler-icon{
-  color: black!important;
-}
-.navbar-toggler-icon {
-  color: black;
-} 
-
-.navbar-toggler > .navbar-toggler-icon {
-  color: black;
-} */
-
 .nav-item :hover {
   background-color: #ffc107;
   color: white;
   border-radius: 4px;
 }
 
-
 .dropdown:hover > .dropdown-menu {
   display: block;
-
 }
 
-.dropdown-menu > .dropdown-item:hover{
-  background-color:#ffc107 ;
+.dropdown-menu > .dropdown-item:hover {
+  background-color: #ffc107;
   color: white;
 }
 
 .dropdown > .dropdown-menu {
   background-color: white;
 }
-
 
 .heading {
   font-family: "Anton", sans-serif;
@@ -88,8 +74,6 @@
   padding: 2px;
 }
 
-
-
 #changetext:after {
   color: rgb(237, 178, 28);
   font-weight: bold;
@@ -122,15 +106,14 @@
   background-color: #ffc107;
 }
 
-.container{
+.container {
   padding-top: 20px;
   margin: 20px;
-  border:none;
-  box-shadow: 0px 0px 20px  rgb(162, 160, 160);
-
+  border: none;
+  box-shadow: 0px 0px 20px rgb(162, 160, 160);
 }
 
-img{
+img {
   width: 800px;
   /* padding :20px; */
   justify-content: center;
@@ -146,23 +129,86 @@ img{
   font-family: "Playfair Display", serif;
   font-family: "Poppins", sans-serif;
   font-family: "Roboto Slab", serif;
- 
 }
 
-input[type=text],select {
-  border:none;
+input[type="text"],
+select {
+  border: none;
   box-shadow: 4px 4px 2px rgb(162, 160, 160);
 }
 
-input[type=number],select {
-  border:none;
+input[type="number"],
+select {
+  border: none;
   box-shadow: 4px 4px 2px rgb(162, 160, 160);
 }
-input[type=date],select {
-  border:none;
+input[type="date"],
+select {
+  border: none;
   box-shadow: 4px 4px 2px rgb(162, 160, 160);
 }
-textarea,select {
-  border:none;
+textarea,
+select {
+  border: none;
   box-shadow: 4px 4px 2px rgb(162, 160, 160);
+}
+
+/* @keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+} */
+
+.animated-tada {
+  padding-left: 50px;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+  animation: tada 2s infinite;
+  font-size: 45px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes tada {
+  0% {
+    transform: scale(1);
+  }
+  10%,
+  20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.packages h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+
+.carousel-item > img {
+  width: 100%;
+  height: 50%;
 }
