@@ -222,20 +222,10 @@ select {
   color: orange;
 }
 
-/* .card img {
-  width: 10px;
-  height: px;
-} */
+.card > img {
+  height: 30vh;
+}
 .card {
   border: none;
   box-shadow: 4px 4px 2px rgb(162, 160, 160);
-}
-
-@media (max-width: 20px) {
-  od-card {
-    width: 100%;
-  }
-  .cardContent {
-    max-width: 20px;
-  }
 }
