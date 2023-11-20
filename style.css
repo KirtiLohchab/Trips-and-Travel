@@ -106,24 +106,25 @@
   background-color: #ffc107;
 }
 
-.container {
+/* .container {
   padding-top: 20px;
   margin: 20px;
   border: none;
-  box-shadow: 0px 0px 20px rgb(162, 160, 160);
-}
-/* .container-fluid {
-  padding: 0px;
-  margin: 0px;
-  border: none;
-  box-shadow: 0px 0px 20px rgb(162, 160, 160);
+  box-shadow: 0px 0px 10px rgb(162, 160, 160);
 } */
 
-img {
+.img-fluid {
   width: 800px;
-  /* padding :20px; */
+  padding: 20px;
   justify-content: center;
   align-items: center;
+  filter: drop-shadow(0px 0px 5px rgb(173, 173, 172));
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.img-fluid:hover {
+  transform: scale(1.2);
 }
 
 .form-group {
@@ -222,10 +223,18 @@ select {
   color: orange;
 }
 
-.card > img {
+.card img {
   height: 30vh;
 }
+
 .card {
   border: none;
-  box-shadow: 4px 4px 2px rgb(162, 160, 160);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1);
+  border: none;
+  box-shadow: 0px 0px 20px rgb(162, 160, 160);
 }
