@@ -1,21 +1,16 @@
-// login popup
-
-$(document).ready(function () {
-  setTimeout(function () {
-    $("#loginModal").mobal("show");
-  }, 5000);
-});
-
 function bookNow() {
-  var whereTo = document.getElementById("whereTo").value;
-  var howMany = document.getElementById("howMany").value;
-  var startDate = document.getElementById("startDate").value;
-  var endDate = document.getElementById("endDate").value;
-  var description = document.getElementById("description").value;
+  var form = document.getElementById("bookingForm");
 
-  if (whereTo && howMany && startDate && endDate && description) {
-    alert("Booking successful!");
+  // Additional validation for start date and end date
+  var startDate = new Date(document.getElementById("startDate").value);
+  var endDate = new Date(document.getElementById("endDate").value);
+
+  if (form.checkValidity() && startDate < endDate) {
+    alert(" Thankyou your Booking is successful!");
   } else {
-    alert("Please fill in all fields.");
+    form.classList.add("was-validated");
+    if (startDate >= endDate) {
+      alert("Start date must be less than end date.");
+    }
   }
 }

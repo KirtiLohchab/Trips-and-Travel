@@ -168,45 +168,86 @@
           <img src="logo2.png" alt="" class="img-fluid">
         </div>
         <div class="col-md-6">
-          <form>
-            <div class="form-group" id="book-now">
-           <label for="whereTo">Where to:</label>
-  <select id="whereTo" name="whereTo">
-    <option value="place1">France</option>
-    <option value="place2">Canada</option>
-    <option value="place3">USA</option>
-    <option value="place3">Germany</option>
-    <option value="place3">India</option>
-  </select>
-</div>
-      <div class="form-group">
-            <label for="howMany">How Many Person:</label>
-            <input type="number" id="howMany" name="howMany" placeholder="how Many">
-      </div>
-      
+          <form id="bookingForm" class="needs-validation" novalidate>
+            <div class="form-group">
+              <label for="whereTo">Where to:</label>
+              <select class="form-control" id="whereTo" name="whereTo" required>
+                <option value="">Select destination</option>
+                <option value="destination1">India</option>
+                <option value="destination2">USA</option>
+                <option value="destination2">Canada</option>
+                <option value="destination2">Germany</option>
+                <option value="destination2">France</option>
+              </select>
+              <div class="invalid-feedback">Please select a destination.</div>
+            </div>
 
-      <div class="form-group">
-            <label for="startDate">Start Date:</label>
-            <input type="date" id="startDate" name="startDate" >
-      </div>
+            <div class="form-group">
+              <label for="numberOfPersons">How Many Persons:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="numberOfPersons"
+                name="numberOfPersons"
+                min="1"
+                required
+              />
+              <div class="invalid-feedback">
+                Please enter the number of persons.
+              </div>
+            </div>
 
-      <div class="form-group">
-            <label for="endDate">End Date:</label>
-            <input type="date" id="endDate" name="endDate">
-      </div>
+            <div class="form-group">
+              <label for="startDate">Start Date:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="startDate"
+                name="startDate"
+                min="<?php echo date('Y-m-d'); ?>"
+                required
+              />
+              <div class="invalid-feedback">
+                Please enter a valid start date.
+              </div>
+            </div>
 
-    <div class="form-group">
-            <label for="description">Enter your details:</label>
-            <textarea id="description" name="description" minlength="50" maxlength="500" required></textarea>
-    </div>
+            <div class="form-group">
+              <label for="endDate">End Date:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="endDate"
+                name="endDate"
+                min="<?php echo date('Y-m-d'); ?>"
+                required
+              />
+              <div class="invalid-feedback">Please enter a valid end date.</div>
+            </div>
 
-      <div class="form-group">
-            <!-- <button class="btn bg-warning text-white" >Book Place</button> -->
-            <button class="btn bg-warning text-white"  onclick="bookNow()">Book Place</button>
+            <div class="form-group">
+              <label for="description">Description:</label>
+              <textarea
+                class="form-control"
+                id="description"
+                name="description"
+                rows="3"
+                minlength="50"
+                maxlength="500"
+                required
+              ></textarea>
+              <div class="invalid-feedback">
+                Please enter a description between 50 and 500 characters.
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-warning text-white" onclick="bookNow()">
+              Book Now
+            </button>
           </form>
         </div>
-        </div>
-        </div>
+      </div>
+    </div>
       </section>
       <!-- book-now end -->
       
@@ -276,9 +317,9 @@
                 </div>
                 <p >4.5 star out of 5</p>
                 <h5>price:- $200</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+               <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mb-3">
@@ -300,9 +341,9 @@
                 </div>
                 <p>5 star out of 5</p>
                 <h5>price:- $500</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+                <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mb-3">
@@ -323,9 +364,9 @@
                 </div>
                 <p>4 star out of 5 </p>
                 <h5>price:- $1200</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+                <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mb-3">
@@ -346,9 +387,9 @@
                 </div>
                 <p>5 star out of 5</p>
                 <h5>price:- $2000</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+                <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mb-3">
@@ -370,9 +411,9 @@
                 </div>
                 <p>4.5 star out of 5</p>
                 <h5>price $700</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+                <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mb-3">
@@ -394,9 +435,9 @@
                 </div>
                 <p>4.5 star out of 5</p>
                 <h5>price $2000</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+                <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mb-3">
@@ -417,9 +458,9 @@
                 </div>
                 <p>4 star out of 5</p>
                 <h5>price $1000</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+                <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mb-3">
@@ -440,9 +481,9 @@
                 </div>
                 <p>4.2 star out of 5</p>
                 <h5>price $2200</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+                <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mb-3">
@@ -463,9 +504,9 @@
                 </div>
                 <p>3.9 star out of 5</p>
                 <h5>price $1500</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+                <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mb-3">
@@ -486,9 +527,9 @@
                 </div>
                 <p>5 star out of 5</p>
                 <h5>price $3000</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+                <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mb-3">
@@ -509,9 +550,9 @@
                 </div>
                 <p>4 star out of 5</p>
                 <h5>price $2000</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+                <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 mb-3">
@@ -532,9 +573,9 @@
                 </div>
                 <p>5 star out of 5</p>
                 <h5>price $2500</h5>
-                <button class="btn bg-warning text-white m-2" type="submit">
+                <a href="#book-now"><button class="btn bg-warning text-white m-2" type="submit">
                   Book
-                </button>
+                </button></a>
               </div>
             </div>
         
