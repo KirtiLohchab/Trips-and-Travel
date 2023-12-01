@@ -1,31 +1,69 @@
 function bookNow() {
   var form = document.getElementById("bookingForm");
 
-  // Additional validation for start date, end date, and future date
-  var startDate = new Date(document.getElementById("startDate").value);
-  var endDate = new Date(document.getElementById("endDate").value);
-  var currentDate = new Date();
-
-  if (
-    form.checkValidity() &&
-    startDate < endDate &&
-    startDate >= currentDate &&
-    endDate >= currentDate
-  ) {
+  if (form.checkValidity()) {
     alert(" Thankyou your Booking is successful!");
   } else {
     form.classList.add("was-validated");
-
-    if (startDate >= endDate) {
-      alert("Start date must be less than end date.");
-    }
-
-    if (startDate < currentDate) {
-      alert("Start date must be in the future.");
-    }
-
-    if (endDate < currentDate) {
-      alert("End date must be in the future.");
-    }
   }
 }
+
+$("#startDate")[0].min = new Date().toISOString().split("T")[0];
+
+$("#endDate")[0].min = new Date(new Date().setDate(new Date().getDate() + 1))
+  .toISOString()
+  .split("T")[0];
+
+$(".slider").slick({
+  dots: true,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
+
+$(".move").slick({
+  dots: true,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});

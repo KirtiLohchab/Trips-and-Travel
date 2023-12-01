@@ -10,7 +10,7 @@
     <title>Trips and Travel</title>
     <link rel="shortcut icon" href="logo2.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
+  
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +44,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+<!-- slick-slider -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+<!-- slick end -->
   </head>
   <body>
     <!-- Navbar Start -->
@@ -92,6 +109,7 @@
               <a class="dropdown-item" href="#">Germany</a>
               <a class="dropdown-item" href="#">Canada</a>
               <a class="dropdown-item" href="#">france</a>
+              
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -117,10 +135,10 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#About-us">About Us</a>
           </li>
         </ul>
 
@@ -155,17 +173,19 @@
         <h5>“Live life with no excuses, travel with no regret.”</h5>
         <button class="btn book">Book Place</button>
       </div>
-    </div>
-    <h1 class=" animated-tada text-center text-warning">Book Now</h1>
+</div>
   </section>
   <!-- homepage end-->
 
   <!-- book-now start -->
        <section class="book-now" id="book-now">
-    <div class="container mb-3">
+    <div class="container mb-3 bg-">
+      <hr>
+      <h1 class="text-center text-warning font-weight-bold">Book Now</h1>
+      <hr>
       <div class="row">
         <div class="col-md-6 ">
-          <img src="logo2.png" alt="" class="img-fluid">
+          <img src="logo2.png" alt="" class="img-fluid mb-4" >
         </div>
         <div class="col-md-6">
           <form id="bookingForm" class="needs-validation" novalidate>
@@ -175,9 +195,18 @@
                 <option value="">Select destination</option>
                 <option value="destination1">India</option>
                 <option value="destination2">USA</option>
-                <option value="destination2">Canada</option>
-                <option value="destination2">Germany</option>
-                <option value="destination2">France</option>
+                <option value="destination3">Canada</option>
+                <option value="destination4">Germany</option>
+                <option value="destination5">France</option>
+                <option value="destination6">Rishikesh</option>
+                <option value="destination7">Agra</option>
+                <option value="destination8">Kashmir</option>
+                <option value="destination9">Disneyland</option>
+                <option value="destination10">Bronx-Zoo</option>
+                <option value="destination11">Paris</option>
+                <option value="destination12">New-york</option>
+                <option value="destination13">Normany</option>
+                <option value="destination14">Toronto</option>
               </select>
               <div class="invalid-feedback">Please select a destination.</div>
             </div>
@@ -204,7 +233,7 @@
                 class="form-control"
                 id="startDate"
                 name="startDate"
-                min="<?php echo date('Y-m-d'); ?>"
+                min="1"
                 required
               />
               <div class="invalid-feedback">
@@ -219,7 +248,7 @@
                 class="form-control"
                 id="endDate"
                 name="endDate"
-                min="<?php echo date('Y-m-d'); ?>"
+                min="1"
                 required
               />
               <div class="invalid-feedback">Please enter a valid end date.</div>
@@ -250,14 +279,50 @@
     </div>
       </section>
       <!-- book-now end -->
+
+      <!-- what's your mood -->
+      <section class="what-mood">
+        <div class="container">
+          <hr>
+          <h1 class="text-center text-warning">What’s Your holiday Mood?</h1>
+          <hr>
+          <div class="row slider">
+            <div class="col-md-3 col-sm-6">
+              <img src="images/wildlife.avif" alt="" >
+              <h3 class="text-center"> Wildlife </h3>
+          </div>
+            <div class="col-md-3 col-sm-6">
+              <img src="images/mountain.jpg" alt="" >
+              <h3 class="text-center">Mountain</h3>
+          </div>
+            <div class="col-md-3 col-sm-6">
+              <img src="images/family.png" alt="" >
+              <h3 class="text-center">Family</h3>
+          </div>
+            <div class="col-md-3 col-sm-6">
+              <img src="images/cruise.png" alt="" >
+              <h3 class="text-center">Cruise</h3>
+          </div>
+            <div class="col-md-3 col-sm-6">
+              <img src="images/solo.png" alt="" >
+              <h3 class="text-center">Solo</h3>
+          </div>
+            <div class="col-md-3 col-sm-6">
+              <img src="images/beach.jpg" alt="" >
+              <h3 class="text-center">Beach</h3>
+          </div>
+          </div>
+        </div>
+        </section>
+      <!--  end what's your mood -->
       
       <!-- best packages start -->
       <section class="packages" id="packages" >
-       <h1 class="text-center text-warning wavy-text">
-        Best Holiday Packages
-      </h1>
-       <div class="container-fluid mb-3">
-       <div id="mycarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+       <div class="container mb-3">
+        <hr>
+        <h1 class="text-center text-warning">Best Holiday Packages</h1>
+       <hr>
+        <div id="mycarousel" class="carousel-fade carousel" data-interval="2000" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
           <li data-target="#mycarousel" data-slide-to="1" ></li>
@@ -294,10 +359,205 @@
       </section>
 <!-- best packages end  -->
 
+<!-- Gallery -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <hr>
+    <h1 class="text-center text-info">Find The Perfect Escape</h1>
+    <p class="text-center">Discover your ideal Experience</p>
+    <hr>
+    <div class="row mb-3">
+        <div class="col-md-5 m-3 text-center">
+            <img src="images/india.png" alt="" class="img-fluid">
+            <h3>Rajasthan</h3>
+        </div>
+        <div class="col-md-6">
+        <h1 class="text-center">Top Tranding destination in INDIA</h1>
+
+        <div class="row move text-center">
+            <div class="col-md-6">
+                <img src="images/india1.png" alt="">
+                <h3>Amritsar</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/india-ooty.png" alt="">
+                <h3>Ooty</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/india3.png" alt="">
+                <h3>Kerala</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/india2.png" alt="">
+                <h3>Mumbai</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/ab.jpg" alt="">
+                <h3>Himachal Pradesh</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/redfort.jpg" alt="">
+                <h3>Delhi</h3>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-5 m-3 text-center">
+            <img src="images/cologne-germany.png" alt="" class="img-fluid">
+            <h3>Cologne</h3>
+        </div>
+        <div class="col-md-6">
+        <h1 class="text-center">Top Tranding destination in GERMANY</h1>
+
+        <div class="row move text-center">
+            <div class="col-md-6">
+                <img src="images/germany-koblenz.png" alt="">
+                <h3>Koblenz</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/germany-medieval-rithenburg.png" alt="">
+                <h3>Medieval-Rithenburg</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/germany-munich.png" alt="">
+                <h3>Munich</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/berlin-germany.png" alt="">
+                <h3>Berlin</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/d.jpg" alt="">
+                <h3>Frankfurt</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/The-Black-Forest-germany.png" alt="">
+                <h3>The Black Forest</h3>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-5 m-3 text-center">
+            <img src="images/california.png" alt="" class="img-fluid">
+            <h3>California</h3>
+        </div>
+        <div class="col-md-6">
+        <h1 class="text-center">Top Tranding destination in <br>USA</h1>
+
+        <div class="row move text-center">
+            <div class="col-md-6">
+                <img src="images/usa-best-places-las-vegas.jpg" alt="">
+                <h3>Las-Vegas</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/usa-best-places-miami.png" alt="">
+                <h3>Miami</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/hawaii-usa.png" alt="">
+                <h3>Hawaii</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/hilo-usa.png" alt="">
+                <h3>Hilo</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/new-york-usa.png" alt="">
+                <h3>New York</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/nevada-usa.png" alt="">
+                <h3>Nevada</h3>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-5 m-3 text-center">
+            <img src="images/louvre-museum-france.png" alt="" class="img-fluid">
+            <h3>Louvre Museum</h3>
+        </div>
+        <div class="col-md-6">
+        <h1 class="text-center">Top Tranding destination in FRANCE</h1>
+
+        <div class="row move text-center">
+            <div class="col-md-6">
+                <img src="images/Paris-Pont-Alexandre-france.png" alt="">
+                <h3>Pont-Alexandre</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/Paris_Pont-Neuf-france.png" alt="">
+                <h3>Pont-Neuf</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/saint-tropez-france.png" alt="">
+                <h3>Saint-Tropez</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/eifil-tower.png" alt="">
+                <h3>Eiffel Tower</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/the-alsace-region-france.png" alt="">
+                <h3>The-Alsace-Region</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/marseille-france.png" alt="">
+                <h3>Marseille</h3>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-5 m-3 text-center">
+            <img src="images/canada-mont-tremblant.png" alt="" class="img-fluid">
+            <h3>Mont-Tremblant</h3>
+        </div>
+        <div class="col-md-6">
+        <h1 class="text-center">Top Tranding destination in CANADA</h1>
+
+        <div class="row move text-center">
+            <div class="col-md-6">
+                <img src="images/canada- niagara-falls.png" alt="">
+                <h3>Niagara-Falls</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/canada- whistler.png" alt="">
+                <h3>Whistler</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/canada-jasper-national-park.png" alt="">
+                <h3>Jasper Park</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/canada-montreal.png" alt="">
+                <h3>Montreal</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/canada-quebec city.png" alt="">
+                <h3>Quebec City</h3>
+            </div>
+            <div class="col-md-6">
+                <img src="images/canada-st.-john's.png" alt="">
+                <h3>St. John's</h3>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+</section>
+<!--end Gallery -->
+
 <!-- rating and review start-->
       <section class="Rating-Reviews" id="rating-review">
         <div class="container" id="rating">
+          <hr>
           <h1 class="text-center text-info  font-weight-bold">Rating & Reviews</h1>
+          <hr>
                    <div class="row">
             <div class="col-md-4 col-sm-6 mb-3">
               <div class="card text-center">
@@ -655,13 +915,44 @@
       </section>
       <!-- login end -->
 
+      <!-- benrfits -->
+      <section class="benefit">
+        <div class="container">
+          <hr>
+          <h1 class="text-center font-weight-bold text-info">Check out really cool benefits of travelling with us</h1>
+          <hr>
+          <div class="row slider">
+            <div class="col-md-3 col-lg-3">
+              <img src="images/gg.jpg" alt="">
+              <h3>Personalised</h3>
+              <p>Experience your dream vacation with our bespoke travel packages,tailored to your uniqe interests and preferences </p>
+              </div>
+            <div class="col-md-3 col-lg-3">
+              <img src="images/e.jpeg" alt="">
+              <h3>Innovative</h3>
+              <p>Our innovative holiday company create cutting-edge travel experiences that exceed expectation and inspaire lifelong memories</p>
+              </div>
+            <div class="col-md-3 col-lg-3">
+              <img src="images/customer.png" alt="">
+              <h3>Customer-focused</h3>
+              <p>From start to finish, our customer focused travel services prioritize your comfort,convenience and satisfaction </p>
+              </div>
+            <div class="col-md-3 col-lg-3">
+              <img src="images/ac.png" alt="">
+              <h3>Trustworthy</h3>
+              <p>Travel with peace of mind, as our trustworthy and reliable services prioritize your safety and security </p>
+              </div>
+              </div>
+              </div>
+              </section>
+      <!--end benrfits -->
+
       <!-- services start -->
       <section class="services" id="service">
-        <div class="container" id="services">
+        <div class="container" >
           <h1 class="text-center text-white font-weight-bold">Our Services</h1>
-          <br />
-          <br />
-          <br />
+          <br>
+          <br>          
           <div class="row">
             <div class="col-md-4 col-sm-6 mb-3">
               <div class="card text-center">
@@ -740,5 +1031,63 @@
       </section>
       <!-- services end -->
 
+      <!-- About us -->
+      <section class="About-us" id="About-us">
+        <div class="container mb-3">
+          <hr>
+          <h1 class="text-center text-uppercase font-weight-bold py-2">about us</h1>
+          <hr>
+          <div class="row">
+            <div class="col-md-6 ">
+              <img src="logo2.png" alt="" class="img-fluid mb-4" >
+            </div>
+            <div class="col-md-6 ">
+              <h2>Trips and Travel</h2>
+<p>Welcome to Trips and Travel, where we transform dreams into unforgettable journeys! We are a passionate team of travel enthusiasts dedicated to creating extraordinary travel experiences for our clients.</p>
+
+ <p>Our Mission:
+  At Trips and Travel, our mission is to inspire and enable travelers to explore the world with confidence. We believe that travel has the power to enrich lives and create lasting memories. Through personalized service and attention to detail, we strive to make every journey with us a seamless and remarkable adventure</p>
+              </div>
+              </div>
+              </div>
+              </section>
+              <!-- end about us -->
+              
+
+              <!-- footer -->
+              <section>
+                <footer class="bg-warning text-white text-center p-3">
+                  <div class="container">
+                    <h1 class="font-weight-bold">Trips and Travel</h1>
+                    <ul class="h3 text-center">
+                      <li class="list-inline-item  ">
+                        <a href="#"><i class="bi bi-facebook text-black m-3"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#"><i class="bi bi-twitter text-black m-3"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#"><i class="bi bi-instagram text-black m-3"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#"><i class="bi bi-youtube text-black m-3"></i></a>
+                      </li>
+                    </ul>
+
+                    <p>Designed by <a href="">Kirti Lohchab</a></p>
+      <p>© Copyright | All Rights Reserved</p>
+      </div>
+      </footer>
+      </section>
+
+    <!-- slick min -->
+      <script
+   src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+   integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+        ></script>
+
+      <script src="script.js"></script>
         </body>  
 </html>
