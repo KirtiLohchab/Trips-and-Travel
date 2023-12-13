@@ -8,7 +8,7 @@
       content="Trips,Travel,Trips Travel,Experience, Explore, Escape"
     />
     <title>Trips and Travel</title>
-    <link rel="shortcut icon" href="logo2.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/logo2.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   
 
@@ -66,7 +66,7 @@
     <!-- Navbar Start -->
     <section class="nav  sticky-top bg-white">
     <nav class="navbar navbar-expand-lg w-100">
-      <img src="logo2.png" id="logo" />
+      <img src="images/logo2.png" id="logo" />
       <div class="navbar-brand text-info">Trips and Travel</div>
       <a
         class="navbar-toggler"
@@ -125,13 +125,11 @@
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">Food and Drinks</a>
-              <a class="dropdown-item" href="#">flight</a>
+              <a class="dropdown-item" href="#">Flight</a>
               <a class="dropdown-item" href="#">Hotels</a>
               <a class="dropdown-item" href="#">Travel Insurance</a>
               <a class="dropdown-item" href="#">VISA</a>
               <a class="dropdown-item" href="#">Holiday Plan</a>
-              <a class="dropdown-item" href="#">Cabs</a>
-              <a class="dropdown-item" href="#">Trains</a>
             </div>
           </li>
           <li class="nav-item">
@@ -144,15 +142,15 @@
 
         <div class="d-flex p-2">
           <a href="#loginModal" data-toggle="modal"><button class="btn bg-warning text-white mr-2">Login</button></a>
-          <a href="#regModal" data-toggle="modal"><button class="btn bg-warning text-white">Register</button></a>
         </div>
 
-        <form class="d-flex">
+        <form class="d-flex align-items-center">
           <input
             class="form-control mr-sm-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
+            style="height: 40px";
           />
           <button class="btn bg-warning text-white m-2" type="submit">
             Search
@@ -185,7 +183,7 @@
       <hr>
       <div class="row">
         <div class="col-md-6 ">
-          <img src="logo2.png" alt="" class="img-fluid mb-4" >
+          <img src="images/logo2.png" alt="" class="img-fluid mb-4" >
         </div>
         <div class="col-md-6">
           <form id="bookingForm" class="needs-validation" novalidate>
@@ -843,7 +841,7 @@
 <!-- rating and review end-->
 
 <!-- login start -->
-      <section class="login" id="login">
+      <section class="login">
           <div class="modal fade" id="loginModal">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -851,12 +849,14 @@
                 <div class="modal-body">
                     <form>
                       <div class="form-group">
-                        <label for="Email">Username or Email address</label>
-                        <input type="email" class="form-control" id="Email" placeholder="Username or Email address">
+                        <label for="Email"> Email address</label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="Username or Email address">
+                        <p id="loginEmailtext"></p> 
                         </div>
                       <div class="form-group">
                         <label for="Password">Password</label>
-                        <input type="password" class="form-control" id="Password" placeholder="Password">
+                        <input type="password" class="form-control" id="password1" placeholder="Password">
+                        <p id="loginpwdtext"></p> 
                       </div>
                       <div class="form-group">
                         <a href="#"><small>Forgot password?</small></a>
@@ -882,20 +882,35 @@
                 <div class="modal-body">
                      <form>
                       <div class="form-group">
-                        <label for="name">Full Name</label>
+                        <label for="name">Full Name:</label>
                         <input type="text" class="form-control" id="name" placeholder="Enter your name">
                         </div>
                         <div class="form-group">
-                          <label for="Contact">Contact</label>
-                          <input type="tel" class="form-control" id="Password" placeholder="Enter your Password">
+                          <label for="Contact">Contact:</label>
+                          <input type="tel" class="form-control" id="Contact" >
                         </div>
                         <div class="form-group">
-                          <label for="Email1">Email address</label>
-                          <input type="email" class="form-control" id="Email1" placeholder="Enter your Email-ID">
+                          <label for="date">Date of birth:</label>
+                          <input type="date" class="form-control" id="date" >
+                        </div>
+                        <div class="form-group">
+                        <label for="Gender">Gender</label>
+                              <br>
+                          <input type="radio"  name="radio"id="radio1"> Male
+                          <input type="radio" name="radio" id="radio2"> Female
+                          <input type="radio"  name="radio"id="radio3"> Other
+                        </div>
+
+                        <div class="form-group">
+                          <label for="Email1">Email address:</label>
+                          <input type="email" class="form-control" id="registerEmail" placeholder="Enter 
+                            your Email-ID">
+                          <p id="regiEmailtext"></p>
                           </div>
                       <div class="form-group">
-                        <label for="Password">Password</label>
-                        <input type="password" class="form-control" id="Password">
+                        <label for="Password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your Password">
+                        <p id="pwdtext"></p>
                       </div>           
                       <div class="form-group">
                         <a href="#"><small>Forgot password?</small></a>
@@ -1039,7 +1054,7 @@
           <hr>
           <div class="row">
             <div class="col-md-6 ">
-              <img src="logo2.png" alt="" class="img-fluid mb-4" >
+              <img src="images/logo2.png" alt="" class="img-fluid mb-4" >
             </div>
             <div class="col-md-6 ">
               <h2>Trips and Travel</h2>
@@ -1056,7 +1071,7 @@
 
               <!-- footer -->
               <section>
-                <footer class="bg-warning text-white text-center p-3">
+                <footer class="bg-warning text-white text-center p-2">
                   <div class="container">
                     <h1 class="font-weight-bold">Trips and Travel</h1>
                     <h5>“Live life with no excuses, travel with no regret.”</h5>

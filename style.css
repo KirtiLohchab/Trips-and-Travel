@@ -47,7 +47,7 @@
 }
 
 .home .background-image {
-  background-image: url("background.png");
+  background-image: url("images/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -61,7 +61,7 @@
 }
 
 .nav #logo {
-  width: 120px;
+  width: 80px;
   padding: 2px;
 }
 

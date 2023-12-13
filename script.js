@@ -67,3 +67,95 @@ $(".move").slick({
     },
   ],
 });
+
+$(document).ready(function () {
+  $("#password").keyup(function () {
+    if (checkLoginPassword()) {
+      $("#pwdtext").html("<span style='color: green;'>Password Valid</span>");
+    } else {
+      $("#pwdtext").html(
+        "<span style='color: red;'>Use uppercase, lowercase, number and special characters</span>"
+      );
+    }
+  });
+});
+
+$(document).ready(function () {
+  $("#loginEmail").keyup(function () {
+    if (checkLoginEmail()) {
+      $("#loginEmailtext").html(
+        "<span style='color: green;'>E-mail Valid</span>"
+      );
+    } else {
+      $("#loginEmailtext").html(
+        "<span style='color: red;'>Enter your E-mail</span>"
+      );
+    }
+  });
+});
+$(document).ready(function () {
+  $("#registerEmail").keyup(function () {
+    if (checkRegisterEmail()) {
+      $("#regiEmailtext").html(
+        "<span style='color: green;'>E-mail Valid</span>"
+      );
+    } else {
+      $("#regiEmailtext").html(
+        "<span style='color: red;'>Enter your E-mail</span>"
+      );
+    }
+  });
+});
+
+$(document).ready(function () {
+  $("#password1").keyup(function () {
+    if (checkRegisterPassword()) {
+      $("#loginpwdtext").html(
+        "<span style='color: green;'>Password Valid</span>"
+      );
+    } else {
+      $("#loginpwdtext").html(
+        "<span style='color: red;'>Use uppercase, lowercase, number and special characters</span>"
+      );
+    }
+  });
+});
+
+function checkLoginPassword() {
+  let pwd = $("#password").val();
+  let pwdExpression = /^[a-zA-Z0-9!@#$%^&*]{8,15}$/;
+  if (pwdExpression.test(pwd)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function checkLoginEmail() {
+  let email = $("#loginEmail").val();
+  let emailExpression = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (emailExpression.test(email)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function checkRegisterPassword() {
+  let pwd = $("#password1").val();
+  let pwdExpression = /^[a-zA-Z0-9!@#$%^&*]{8,15}$/;
+  if (pwdExpression.test(pwd)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function checkRegisterEmail() {
+  let email = $("#registerEmail").val();
+  let emailExpression = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (emailExpression.test(email)) {
+    return true;
+  } else {
+    return false;
+  }
+}
